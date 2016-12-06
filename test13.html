@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>test 13</title>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app-13">
+    <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
+    <label for="jack">jack</label>
+    <input type="checkbox" id="john" value="John" v-model="checkedNames">
+    <label for="john">john</label>
+    <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
+    <label for="mike">mike</label>
+    <br>
+    <span>Checked names: {{checkedNames}}</span>
+  </div>
+  <div id="app-14">
+    <input type="radio" id="one" value="One" v-model="picked">
+    <label for="one">One</label>
+    <br>
+    <input type="radio" id="two" value="Two" v-model="picked">
+    <label for="two">Two</label>
+    <br>
+    <span>Picked: {{ picked }}</span>
+  </div>
+  <div id="app-15">
+    <select v-model="selected">
+      <option>A</option>
+      <option>B</option>
+      <option>C</option>
+    </select>
+    <span>Selected:{{ selected }}</span>
+  </div>
+  <div id="app-16">
+    <select v-model="selected">
+      <option v-for="option in options" v-bind:value="option.value">{{ option.text }}</option>
+    </select>
+    <span>Selected:{{ selected }}</span>
+  </div>
+  <script>
+    new Vue({
+      el: "#app-13",
+      data: {
+        checkedNames:[]
+      }
+    })
+    new Vue({
+      el: "#app-14",
+      data: {
+        picked:""
+      }
+    })
+    new Vue({
+      el: "#app-15",
+      data: {
+        selected:"A"
+      }
+    })
+    new Vue({
+      el: "#app-16",
+      data: {
+        selected: "A",
+        options:[
+          {text:"One", value:"A"},
+          {text:"Two", value:"B"},
+          {text:"Three", value:"C"}
+        ]
+      }
+    })
+  </script>
+</body>
+</html>
