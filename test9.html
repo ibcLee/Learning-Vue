@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>test 9</title>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app-9">
+  <div v-if="Math.random()>0.5">Sorry</div>
+  <div v-else>Not sorry</div>
+</div>
+<script>
+  var app9 = new Vue({
+    el: "#app-9"
+  })
+</script>
+</body>
+</html>

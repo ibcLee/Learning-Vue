@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>test 11</title>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+  <ul id="app-11">
+    <li v-for="n in evenNumbers">{{ n }}</li>
+  </ul>
+  <script>
+    var app11 = new Vue({
+      el: "#app-11",
+      data:{
+        numbers: [1,2,3,4,5,6,7,8,9]
+      },
+      computed: {
+        evenNumbers: function(){
+          return this.numbers.filter(function(number){
+            return number % 2 === 0
+          })
+        }
+      }
+    })
+  </script>
+</body>
+</html>

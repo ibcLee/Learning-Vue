@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>test 10</title>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app-10">
+    <div v-if="loginType === 'username'">
+      <label>Username</label>
+      <input placeholder="Enter your username" key="username-input">
+    </div>
+    <div v-else>
+      <label>Email</label>
+      <input placeholder="Enter your email address" key="email-input">
+    </div>
+    <button v-on:click="changeInput">change</button>
+  </div>
+  <script>
+    var app10 = new Vue({
+      el: "#app-10",
+      data:{
+        loginType:'username'
+      },
+      methods:{
+        changeInput: function(){
+          return this.loginType = this.loginType === "username" ? "email" : "username"
+        }
+      }
+    })
+  </script>
+</body>
+</html>
