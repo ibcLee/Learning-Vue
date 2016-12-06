@@ -45,3 +45,8 @@ Vue.js get Started!
 * `.down`
 * `.left`
 * `.right`
+
+#### 修饰符
+`.lazy`在`change`事件中同步
+`.number`自动将用户的输入值转为Number类型（如果原值的转换结果为NaN则返回原值）
+`.trim`自动过滤用户输入的首位空格
